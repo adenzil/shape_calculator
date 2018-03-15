@@ -12,12 +12,13 @@
 
 <?php
 	session_start();
-	error_reporting(E_ERROR);
 
+	// Factory to dynamically create class to calcuclate area.
 	require_once 'Controller/shapeFactory.php';
 
 	require_once 'View/header.html';
 
+	// All types of shapes accepted and their values.
 	function shapes(){
 		return array('rectangle'=>array('width','length'),'circle'=>array('diameter'),'square'=>array('side'),'ellipse'=>array('major_radius','minor_radius'));
 	}
@@ -25,13 +26,16 @@
 <div class="container" id="mainBody">
 	<div class="row">
 		<?php 
-			// print_r($_SESSION);die();
+			
 			require_once 'View/left_description.html';
+
+			// If user had already chosen shape and/or values, redirect him to correct page.
 			if(empty($_SESSION['choice']) && empty($_SESSION['answer_values']))
 				require_once 'View/page/page1.html'; 
 			else if(isset($_SESSION['choice']) && empty($_SESSION['answer_values']))
 				require_once 'View/page/page2.html'; 
 			else{
+				// create object of chosen shape and values from session
 				$shape = shapeFactory::newShape($_SESSION['choice'],$_SESSION['answer_values']);
 				$_SESSION['area'] = $shape->getArea();
 				require_once 'View/page/page3.html';
