@@ -1,7 +1,7 @@
 <?php
 
 
-class circle{
+class circle implements shapeInterface{
 	
 	function __construct($parameters){
 		$this->diameter = $parameters['diameter'];

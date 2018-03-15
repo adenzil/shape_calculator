@@ -1,7 +1,7 @@
 <?php
 
 
-class rectangle{
+class rectangle implements shapeInterface{
 	
 	function __construct($parameters){
 		$this->length = $parameters['length'];

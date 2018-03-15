@@ -1,7 +1,7 @@
 <?php
 
 
-class ellipse{
+class ellipse  implements shapeInterface{
 	
 	function __construct($parameters){
 		$this->minor_radius = $parameters['minor_radius'];

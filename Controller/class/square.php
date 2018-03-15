@@ -1,7 +1,7 @@
 <?php
 
 
-class square{
+class square implements shapeInterface{
 	
 	function __construct($parameters){
 		$this->side = $parameters['side'];
