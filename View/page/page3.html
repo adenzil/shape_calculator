@@ -1,0 +1,20 @@
+<div class="col-md-6">
+	<div id="answer-div">
+		<div id="form-content">
+			<div class="step-header text-center">Step 3 : Your results</div>
+			<div class="step-description text-left">You have calculated the area of a <?php echo($_SESSION['choice']);?> with a 
+				<?php
+					foreach($_SESSION['answer_values'] as $key=>$value){
+						echo($key." of ".$value." ");
+					}
+				?>.
+			Below is your result:</div>
+			<div class="final_answer text-center">
+				<span><h4>The Area is <?php echo($_SESSION['area']);?>.</h4></span>
+			</div>
+			<div class="submission">
+				<input type="button" class="btn-primary" value="Start over" id="reset"/>
+			</div>
+		</div>
+	</div>
+</div>

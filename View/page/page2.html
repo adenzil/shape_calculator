@@ -1,0 +1,20 @@
+<div class="col-md-6">
+	<div id="answer-div">
+		<div id="form-content">
+			<div class="step-header text-center">Step 2 : Insert your values</div>
+			<div class="step-description text-left">You have selected a circle, please input the required variables.</div>
+			<div class="answer">
+				<?php
+					echo ("<ul>");
+					foreach(shapes()[$_SESSION['choice']] as $key => $value){
+						echo ("<li>".$value." : &nbsp;"."<input type='number' id='".$value."'/></li></br>");
+					}
+					echo ("</ul>");
+				?>
+			</div>
+			<div class="submission">
+				<input type="button" class="btn-primary" value="Go to next step" id="submit_answer_values"/> &nbsp; or &nbsp; <span id="reset"><u>Cancel</u> </span>
+			</div>
+		</div>
+	</div>
+</div>

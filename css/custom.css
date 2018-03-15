@@ -1,0 +1,39 @@
+#wrapperHeader {
+	width:100%;
+	height:100px;
+	background:url(images/header.png) repeat-x 0 0;
+}
+
+#wrapperHeader img {
+	margin:0;
+	width: 100%;
+}
+
+#answer-div{
+	border: 2px solid grey;
+	border-radius: 5px;
+}
+
+#form-content{
+	margin: 20px;
+}
+
+#form-content div{
+	margin: 20px 0 20px 0;
+}
+
+#form-content ul {
+	list-style-type: none;
+}
+
+#mainBody{
+	margin-top: 15%;
+}
+
+#reset{
+	cursor: pointer;
+}
+
+#form-content .final_answer{
+	margin: 50px 0 50px 0;
+}
